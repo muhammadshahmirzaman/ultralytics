@@ -17,7 +17,7 @@ from ultralytics.utils.torch_utils import TORCH_1_11, fuse_conv_and_bn, smart_in
 
 from .block import DFL, SAVPE, BNContrastiveHead, ContrastiveHead, Proto, Residual, SwiGLUFFN
 from .conv import Conv, DWConv
-from .transformer import MLP, DeformableTransformerDecoder, DeformableTransformerDecoderLayer
+    from .transformer import MLP, DeformableTransformerDecoder, DeformableTransformerDecoderLayer
 from .utils import bias_init_with_prob, linear_init
 
 __all__ = "OBB", "Classify", "Detect", "Pose", "RTDETRDecoder", "Segment", "YOLOEDetect", "YOLOESegment", "v10Detect"
@@ -906,7 +906,7 @@ class RTDETRDecoder(nn.Module):
         # self.input_proj = nn.ModuleList(Conv(x, hd, act=False) for x in ch)
 
         # Transformer module
-        decoder_layer = DeformableTransformerDecoderLayer(hd, nh, d_ffn, dropout, act, self.nl, ndp)
+            decoder_layer = DeformableTransformerDecoderLayer(hd, nh, d_ffn, dropout, act, self.nl, ndp)
         self.decoder = DeformableTransformerDecoder(hd, decoder_layer, ndl, eval_idx)
 
         # Denoising part
