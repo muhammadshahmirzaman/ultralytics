@@ -1,0 +1,21 @@
+# Dataset configuration for License Plate Recognition
+# Paths can be relative to this file's location or absolute paths
+
+# Train/val/test sets
+train: train/images  # train images (relative to data.yaml location)
+val: valid/images    # val images (relative to data.yaml location)
+test: test/images    # test images (optional)
+
+# Number of classes
+nc: 1
+
+# Class names
+names:
+  0: License_Plate
+
+roboflow:
+  workspace: roboflow-universe-projects
+  project: license-plate-recognition-rxg4e
+  version: 11
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/roboflow-universe-projects/license-plate-recognition-rxg4e/dataset/11

@@ -61,7 +61,6 @@ from ultralytics.utils.torch_utils import (
     unwrap_model,
 )
 
-
 class BaseTrainer:
     """A base class for creating trainers.
 
